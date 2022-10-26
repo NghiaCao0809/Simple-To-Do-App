@@ -55,9 +55,12 @@ function DisplayTodos () {
 		span.classList.add('bubble');
 		if (todo.category == 'personal') {
 			span.classList.add('personal');
-		} else {
+		} else if(todo.category == 'business'){
 			span.classList.add('business');
-		}
+		} else {
+            span.classList.add('family');
+        }
+        
 		content.classList.add('todo-content');
 		actions.classList.add('actions');
 		edit.classList.add('edit');

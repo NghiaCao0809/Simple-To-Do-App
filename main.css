@@ -2,6 +2,7 @@
     --primary: #ea40a4;
     --business: #3a82ee;
     --personal: var(--primary);
+    --family: #f3571a;
     --light: #EEE;
     --dark: #313154;
     --grey: #888;
@@ -11,6 +12,7 @@
 
     --business-glow: 0px 0px 4px rgba(58, 130, 238, 0.75);
     --personal-glow: 0px 0px 4px rgba(234, 64, 164, 0.75);
+    --family-glow: 0px 0px 4px rgba(252, 140, 36, 0.986);
 }
 
 * {
@@ -122,6 +124,11 @@ input[type="radio"], input[type="checkbox"] {
     box-shadow: var(--personal-glow);
 }
 
+.bubble.family {
+    border-color: var(--family);
+    box-shadow: var(--family-glow);
+}
+
 .bubble::after {
     content: '';
     display: block;
@@ -137,6 +144,11 @@ input[type="radio"], input[type="checkbox"] {
 .bubble.personal::after {
     background-color: var(--personal);
     box-shadow: var(--personal-glow);
+}
+
+.bubble.family::after {
+    background-color: var(--family);
+    box-shadow: var(--family-glow);
 }
 
 input:checked ~.bubble::after {
